@@ -1,0 +1,146 @@
+.step-content {
+  margin: 20px;
+  Form {
+    display: flex;
+    flex-direction: column;
+    .input-label {
+      color: #808080;
+      font-weight: 700;
+      font-size: 12px;
+      padding-bottom: 0px;
+    }
+    .input-group {
+      margin: 10px 10px;
+    }
+    option {
+      color: black;
+      background-color: white;
+    }
+    input {
+      border: 1px solid #4a4a4a;
+    }
+  }
+  .form-title {
+    color: #2a2a2a;
+    padding: 20px 10px 5px;
+    font-weight: 700;
+    font-size: 24px;
+  }
+  .radio-info {
+    position: relative;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #f0f0f5;
+    font-weight: 400;
+    .period {
+      padding-left: 30px;
+      font-weight: 400;
+    }
+    #radio {
+      width: 20px;
+      height: 20px;
+      margin-left: 10px;
+      margin-bottom: 5px;
+      color: #2a2a2a;
+    }
+    .radio-info .input:checked {
+      border: 1px solid #2a2a2a;
+    }
+    input[type="radio" i] {
+      // appearance: none; // appearance 属性允许您使元素看上去像标准的用户界面元素,清除默认样式
+      //-moz-appearance: none;
+
+      //outline: none;
+      border-radius: 50%;
+      background-size: 20px 20px;
+      color: black;
+      margin-right: 10px;
+    }
+    input[type="radio"]:checked {
+      //appearance: none; // appearance 属性允许您使元素看上去像标准的用户界面元素,清除默认样式
+      // -moz-appearance: none;
+      outline: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .choice-title {
+      padding-top: 20px;
+    }
+    .price {
+      position: absolute;
+      left: 520px;
+      top: 13px;
+      font-weight: 400;
+      font-size: 12px;
+      color: #000000;
+    }
+    .name {
+      width: 350px;
+      border: 1px solid #4a4a4a;
+    }
+  }
+
+  // StepProgress
+  .StepProgress {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3rem;
+    background: goldenrod;
+
+    h3 {
+      color: black;
+      font-size: large;
+      padding-top: 10px;
+      padding-left: 10px;
+    }
+    .Step {
+      color: black;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      text-align: center;
+    }
+
+    .circle-container {
+      height: 24px;
+      width: 24px;
+      background-color: white;
+      border-radius: 50%;
+      border: 1px solid darkgrey;
+      color: black;
+      margin: 0;
+      margin-right: 10px;
+    }
+    &.checked .circle-container::after {
+      content: "\2714";
+    }
+    .connect-line {
+      display: block;
+      height: 3px;
+      background-color: lightgrey;
+      position: absolute;
+      top: 100px;
+      right: 50%;
+      left: -50%;
+    }
+  }
+  .progress-control {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    .previousBtn {
+      margin-left: 10px;
+      background-color: transparent;
+    }
+    .nextBtn {
+      margin-left: 500px;
+      background-color: #f67599;
+      width: 174px;
+    }
+  }
+}

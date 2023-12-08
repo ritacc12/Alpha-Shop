@@ -1,0 +1,137 @@
+@charset "UTF-8";
+.step-content {
+  margin: 20px;
+}
+.step-content Form {
+  display: flex;
+  flex-direction: column;
+}
+.step-content Form .input-label {
+  color: #808080;
+  font-weight: 700;
+  font-size: 12px;
+  padding-bottom: 0px;
+}
+.step-content Form .input-group {
+  margin: 10px 10px;
+}
+.step-content Form option {
+  color: black;
+  background-color: white;
+}
+.step-content Form input {
+  border: 1px solid #4a4a4a;
+}
+.step-content .form-title {
+  color: #2a2a2a;
+  padding: 20px 10px 5px;
+  font-weight: 700;
+  font-size: 24px;
+}
+.step-content .radio-info {
+  position: relative;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #f0f0f5;
+  font-weight: 400;
+}
+.step-content .radio-info .period {
+  padding-left: 30px;
+  font-weight: 400;
+}
+.step-content .radio-info #radio {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  color: #2a2a2a;
+}
+.step-content .radio-info .radio-info .input:checked {
+  border: 1px solid #2a2a2a;
+}
+.step-content .radio-info input[type=radio i] {
+  border-radius: 50%;
+  background-size: 20px 20px;
+  color: black;
+  margin-right: 10px;
+}
+.step-content .radio-info input[type=radio]:checked {
+  outline: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.step-content .radio-info .choice-title {
+  padding-top: 20px;
+}
+.step-content .radio-info .price {
+  position: absolute;
+  left: 520px;
+  top: 13px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #000000;
+}
+.step-content .radio-info .name {
+  width: 350px;
+  border: 1px solid #4a4a4a;
+}
+.step-content .StepProgress {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3rem;
+  background: goldenrod;
+}
+.step-content .StepProgress h3 {
+  color: black;
+  font-size: large;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.step-content .StepProgress .Step {
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+.step-content .StepProgress .circle-container {
+  height: 24px;
+  width: 24px;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid darkgrey;
+  color: black;
+  margin: 0;
+  margin-right: 10px;
+}
+.step-content .StepProgress.checked .circle-container::after {
+  content: "✔";
+}
+.step-content .StepProgress .connect-line {
+  display: block;
+  height: 3px;
+  background-color: lightgrey;
+  position: absolute;
+  top: 100px;
+  right: 50%;
+  left: -50%;
+}
+.step-content .progress-control {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+.step-content .progress-control .previousBtn {
+  margin-left: 10px;
+  background-color: transparent;
+}
+.step-content .progress-control .nextBtn {
+  margin-left: 500px;
+  background-color: #f67599;
+  width: 174px;
+}/*# sourceMappingURL=Form.css.map */

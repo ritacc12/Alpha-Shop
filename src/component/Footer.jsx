@@ -6,7 +6,10 @@ const Footer = () => {
     <div className="footer-container">
       <section className="footer-section">
         <div className="footer-logo-container">
-          <img src="../assets/pictures/logo.svg" className="cursor-point" />
+          <img
+            src="./src/assets/pictures/logo.svg"
+            className="cursor-point"
+          ></img>
         </div>
       </section>
       <section className="footer-section">
@@ -59,9 +62,18 @@ const Footer = () => {
         <div className="section-content">
           <div className="tel-info">+886 02123-45678</div>
           <div className="social-icon-group">
-            <object data="" className="social-icon cursor-point"></object>
-            <object data="" className="social-icon cursor-point"></object>
-            <object data="" className="social-icon cursor-point"></object>
+            <object
+              data="./src/assets/pictures/facebook.svg"
+              className="social-icon cursor-point"
+            ></object>
+            <object
+              data="./src/assets/pictures/instagram.svg"
+              className="social-icon cursor-point"
+            ></object>
+            <object
+              data="./src/assets/pictures/whatsapp.svg"
+              className="social-icon cursor-point"
+            ></object>
           </div>
         </div>
       </section>

@@ -17,9 +17,13 @@ const ProgressControl = ({ stage, setStage }) => {
               setStage(stage - 1);
             }
           }}
-          style={{ background: stage === 1 ? "#5a5a5a" : "pink" }}
+          style={{ background: stage === 1 ? "transparent" : "#F67599" }}
         >
-          <object data="./src/assets/pictures/left-arrow.svg"></object>
+          <object
+            data="./src/assets/pictures/left-arrow.svg"
+            type="image/svg+xml"
+            className="arrow cursor-point"
+          ></object>
           上一步
         </button>
 
@@ -33,7 +37,11 @@ const ProgressControl = ({ stage, setStage }) => {
           }}
         >
           {stage === 3 ? "確認下單" : "下一步"}
-          <object data="./src/assets/pictures/right-arrow.svg"></object>
+          <object
+            data="./src/assets/pictures/right-arrow.svg"
+            type="image/svg+xml"
+            className="arrow cursor-point"
+          ></object>
         </button>
       </div>
     </>

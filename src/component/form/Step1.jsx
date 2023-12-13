@@ -1,8 +1,9 @@
+import "../../Styles/step1.scss";
 export default function Step1() {
   return (
     <>
       <div className="step-content">
-        <form>
+        <form className="step1">
           <h3 className="form-title">寄送地址</h3>
           <section className="form-body col col-12">
             <div className="col col-12">
@@ -18,19 +19,19 @@ export default function Step1() {
                   </select>
                 </div>
               </div>
-              <div className="input-group">
+              <div className="input-group name">
                 <div className="input-label">姓名</div>
                 <input type="text" placeholder="請輸入姓名" />
               </div>
-              <div className="input-group">
+              <div className="input-group phone">
                 <div className="input-label">電話</div>
                 <input type="phone" placeholder="請輸入行動電話" />
               </div>
-              <div className="input-group">
+              <div className="input-group email">
                 <div className="input-label">Email</div>
                 <input type="email" placeholder="請輸入電子郵件" />
               </div>
-              <div className="input-group">
+              <div className="input-group city">
                 <div className="input-label">縣市</div>
                 <select required>
                   <option value>請選擇縣市</option>
@@ -65,7 +66,7 @@ export default function Step1() {
                   <option value="LNN">連江縣</option>
                 </select>
               </div>
-              <div className="input-group">
+              <div className="input-group address">
                 <div className="input-label">地址</div>
                 <input type="text" placeholder="請輸入地址" />
               </div>

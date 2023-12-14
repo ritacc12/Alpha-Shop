@@ -1,0 +1,27 @@
+#form .form-body {
+  .col:nth-child(1) {
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+  }
+
+  .col:nth-child(2) {
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+  }
+
+  .col:nth-child(3) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .name,
+  .cardNumber {
+    width: 540px;
+  }
+
+  .period {
+    width: 255px;
+  }
+  .private {
+    width: 266px;
+  }
+}

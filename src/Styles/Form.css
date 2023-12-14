@@ -4,74 +4,53 @@
   flex-direction: column;
   margin: 20px;
 }
-.step-content .form-left {
-  width: 60%;
+
+#form {
+  width: 100vw;
 }
-.step-content Form {
+#form .container {
+  padding-left: 40px;
+  padding-right: 40px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+#form .form-body {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
-.step-content Form .input-label {
-  color: #808080;
-  font-weight: 700;
-  font-size: 12px;
-  padding-bottom: 0px;
-}
-.step-content Form .input-group {
-  margin: 10px 10px;
-}
-.step-content Form option {
-  color: black;
+#form .form-body input {
+  width: 100%;
+  height: 35px;
   background-color: white;
+  border-radius: 3px;
 }
-.step-content Form input {
-  border: 1px solid #4a4a4a;
-}
-.step-content .form-title {
-  color: #2a2a2a;
-  padding: 20px 10px 5px;
-  font-weight: 700;
-  font-size: 24px;
-}
-.step-content .input-group {
-  width: 435px;
-}
-.step-content .radio-info {
-  position: relative;
-  margin-top: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border: 1px solid #f0f0f5;
-  font-weight: 400;
-}
-.step-content .radio-info .radio-info :checked {
-  border: 1px solid #2a2a2a;
-}
-.step-content .radio-info .period {
-  padding-left: 35px;
-  font-weight: 400;
-}
-.step-content .radio-info #radio {
+#form .form-body input[type=radio] {
   width: 20px;
   height: 20px;
-  margin-left: 10px;
-  margin-bottom: 5px;
-  color: #2a2a2a;
+  margin-right: 0px;
+  padding-left: 10px;
+  align-self: center;
 }
-.step-content .radio-info .choice-title {
-  padding-top: 20px;
+#form .form-body select {
+  width: 100%;
+  height: 43px;
+  border-radius: 3px;
+  background-color: white;
+  color: #5a5a5a;
 }
-.step-content .radio-info .price {
-  position: absolute;
-  left: 30%;
-  top: 13px;
-  font-weight: 400;
-  font-size: 12px;
-  color: #000000;
+#form .form-body .radio-group.col.col-12 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 3px;
+  border: 1px solid #5a5a5a;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 0px;
 }
-.step-content .radio-info .name {
-  width: 350px;
-  border: 1px solid #4a4a4a;
+#form .form-body .radio-info {
+  padding: 0;
+  margin: 0;
 }
 
 .StepProgress {
@@ -132,6 +111,8 @@
   width: 174px;
   height: 46px;
   border-radius: 8pt;
+  color: white;
+  font-size: 14px;
 }
 .progress-control .nextBtn {
   margin-left: 500px;
@@ -141,6 +122,7 @@
   height: 46px;
   border-radius: 8pt;
   color: white;
+  font-size: 14px;
 }
 .progress-control .arrow {
   width: 20px;

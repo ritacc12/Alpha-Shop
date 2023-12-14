@@ -4,7 +4,7 @@ export default function StepProgress({ stage }) {
     <div className="StepProgress">
       <h3>結帳</h3>
       <div className="stepper-container">
-        <div className="Step">
+        <div className="Step" data-phase="address">
           <div className="stepIcon">
             {stage > 1 ? (
               <div>
@@ -15,7 +15,7 @@ export default function StepProgress({ stage }) {
             )}
           </div>
           <label
-            className="label"
+            className="progress-label"
             style={{ color: stage === 1 ? "black" : "gray" }}
           >
             寄送地址
@@ -23,7 +23,7 @@ export default function StepProgress({ stage }) {
           <span className="connect-line"></span>
         </div>
 
-        <div className="Step">
+        <div className="Step" data-phase="shipping">
           <div className="stepIcon">
             {stage > 2 ? (
               <div>
@@ -35,13 +35,13 @@ export default function StepProgress({ stage }) {
           </div>
           <span className="connect-line"></span>
           <label
-            className="label"
+            className="progress-label"
             style={{ color: stage === 2 ? "black" : "gray" }}
           >
             運送方式
           </label>
         </div>
-        <div className="Step">
+        <div className="Step" data-phase="credit-card">
           <div className="stepIcon">
             {stage > 3 ? (
               <div>
@@ -52,7 +52,7 @@ export default function StepProgress({ stage }) {
             )}
           </div>
           <label
-            className="label"
+            className="progress-label"
             style={{ color: stage === 3 ? "black" : "gray" }}
           >
             付款資訊

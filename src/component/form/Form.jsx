@@ -23,13 +23,15 @@ function Form() {
   };
   return (
     <>
-      <div className="container">
-        <div className="form-left">
-          <StepProgress stage={stage} />
-          {FormStage()}
-          <ProgressControl stage={stage} setStage={setStage} />
+      <section id="form">
+        <div className="container">
+          <div className="form-left">
+            <StepProgress stage={stage} />
+            {FormStage()}
+            <ProgressControl stage={stage} setStage={setStage} />
+          </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

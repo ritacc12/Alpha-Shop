@@ -17,7 +17,10 @@ const ProgressControl = ({ stage, setStage }) => {
               setStage(stage - 1);
             }
           }}
-          style={{ background: stage === 1 ? "transparent" : "#F67599" }}
+          style={{
+            background: stage >= 1 ? "transparent" : "#F67599",
+            color: stage === 1 ? "transparent" : "#2a2a2a;",
+          }}
         >
           <object
             data="./src/assets/pictures/left-arrow.svg"

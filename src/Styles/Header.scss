@@ -1,0 +1,40 @@
+#header {
+  width: 100%;
+  background: white;
+  padding-top: 10px;
+  gap: 2rem;
+
+  position: fixed;
+  z-index: 999;
+
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  grid-template-columns: 2fr 1fr 30px 30px 30px;
+  .header-nav {
+    display: flex;
+    gap: 2rem;
+    grid-column-start: 1;
+    padding-left: 60px;
+    padding-right: 40px;
+
+    .nav-item {
+      color: var(--main-text);
+    }
+    .nav-item:hover {
+      color: var(--input-text);
+    }
+  }
+  .nav-icon {
+    color: var(--main-text);
+    width: 24px;
+
+    .nav-icon:hover {
+      color: var(--input-text);
+    }
+
+    .search {
+      padding-left: 10px;
+    }
+  }
+}

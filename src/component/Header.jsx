@@ -1,30 +1,51 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-// import { ReactComponent as Logo } from "../assets/pictures/logo.svg";
-import logo from "../assets/pictures/logo.svg";
-import "../Styles/Header.css";
+import "../Styles/Header.scss";
 
 const Header = () => {
   return (
-    <div className="Header">
+    <section id="header">
       <nav className="header-nav">
-        <a href="">男裝</a>
-        <a href="">女裝</a>
-        <a href="">最新消息</a>
-        <a href="">客製產品</a>
-        <a href="">聯絡我們</a>
-        <div className="logo"></div>
-        <a className="menu">
-          <i className="fa-solid fa-magnifying-glass"></i>
+        <a href="" className="nav-item">
+          男裝
         </a>
-        <a className="menu">
-          <i className="fa-regular fa-heart" href="#"></i>
+        <a href="" className="nav-item">
+          女裝
         </a>
-        <a className="menu">
-          <i className="fa-regular fa-moon"></i>
+        <a href="" className="nav-item">
+          最新消息
+        </a>
+        <a href="" className="nav-item">
+          客製產品
+        </a>
+        <a href="" className="nav-item">
+          聯絡我們
         </a>
       </nav>
-    </div>
+      <a>
+        <img
+          src="./src/assets/pictures/logo.svg"
+          className="header-logo cursor-point"
+        ></img>
+      </a>
+      <object
+        data="./src/assets/pictures/cart.svg"
+        className="nav-icon cursor-point"
+        type="image/svg+xml"
+      ></object>
+
+      <object
+        data="./src/assets/pictures/moon.svg"
+        className="nav-icon cursor-point"
+        type="image/svg+xml"
+      ></object>
+
+      <object
+        data="./src/assets/pictures/search.svg"
+        className="nav-icon cursor-point search"
+        type="image/svg+xml"
+      ></object>
+    </section>
   );
 };
 

@@ -19,13 +19,16 @@ const ProgressControl = ({ stage, setStage }) => {
           }}
           style={{
             background: stage >= 1 ? "transparent" : "#F67599",
-            color: stage === 1 ? "transparent" : "#2a2a2a;",
+            color: stage === 1 ? "transparent" : "#2a2a2a",
           }}
         >
           <object
-            data="./src/assets/pictures/left-arrow.svg"
+            data="./src/assets/pictures/arrow-left-solid.svg"
             type="image/svg+xml"
-            className="arrow cursor-point"
+            className="left-arrow cursor-point"
+            style={{
+              color: stage === 1 ? "transparent" : "#2a2a2a",
+            }}
           ></object>
           上一步
         </button>

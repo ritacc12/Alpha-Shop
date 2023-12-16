@@ -3,6 +3,7 @@
   background: white;
   padding-top: 10px;
   gap: 2rem;
+  height: 60px;
 
   position: fixed;
   z-index: 999;
@@ -10,7 +11,7 @@
   display: grid;
   grid-auto-flow: column;
   align-items: center;
-  grid-template-columns: 2fr 1fr 30px 30px 30px;
+  grid-template-columns: 1fr 1fr 30px 30px 30px;
   .header-nav {
     display: flex;
     gap: 2rem;
@@ -20,6 +21,8 @@
 
     .nav-item {
       color: var(--main-text);
+      text-align: center;
+      width: 64px;
     }
     .nav-item:hover {
       color: var(--input-text);
@@ -36,5 +39,9 @@
     .search {
       padding-left: 10px;
     }
+  }
+  .header-logo {
+    width: 169.83px;
+    height: 30px;
   }
 }

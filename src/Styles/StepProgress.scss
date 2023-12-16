@@ -1,0 +1,55 @@
+.StepProgress {
+  align-items: center;
+  justify-content: center;
+  margin-top: 120px;
+  padding-left: 20px;
+
+  .Progress-title {
+    color: var(--main-text);
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .stepper-container {
+    width: 536px;
+    margin-top: 20px;
+  }
+
+  .Step {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .progress-label {
+    width: 64px;
+  }
+  .stepIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .circle-container {
+    height: 24px;
+    width: 24px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid darkgrey;
+    color: black;
+    text-align: center;
+  }
+
+  .complete {
+    height: 24px;
+    width: 24px;
+  }
+  .connect-line {
+    height: 2px;
+    width: 60px;
+    background: #000000;
+    margin: 0 30px 0 5px;
+  }
+  .connect-line::after {
+    background: var(--progress-undone-color);
+  }
+}

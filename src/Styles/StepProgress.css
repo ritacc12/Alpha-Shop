@@ -1,0 +1,50 @@
+.StepProgress {
+  align-items: center;
+  justify-content: center;
+  margin-top: 120px;
+  padding-left: 20px;
+}
+.StepProgress .Progress-title {
+  color: var(--main-text);
+  font-size: 32px;
+  font-weight: 700;
+}
+.StepProgress .stepper-container {
+  width: 536px;
+  margin-top: 20px;
+}
+.StepProgress .Step {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.StepProgress .progress-label {
+  width: 64px;
+}
+.StepProgress .stepIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.StepProgress .circle-container {
+  height: 24px;
+  width: 24px;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid darkgrey;
+  color: black;
+  text-align: center;
+}
+.StepProgress .complete {
+  height: 24px;
+  width: 24px;
+}
+.StepProgress .connect-line {
+  height: 2px;
+  width: 60px;
+  background: #000000;
+  margin: 0 30px 0 5px;
+}
+.StepProgress .connect-line::after {
+  background: var(--progress-undone-color);
+}/*# sourceMappingURL=StepProgress.css.map */

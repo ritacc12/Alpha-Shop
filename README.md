@@ -4,13 +4,13 @@
 
 - This is a React practice project and will update the function and layout by weeks.
 
-![alpha-shop-step1](https://github.com/ritacc12/IMG/blob/main/FireShot%20Capture%20020%20-%20Alpha%20Shop%20-%20localhost.png)
+![alpha-shop-step1] (https://github.com/ritacc12/IMG/blob/main/FireShot%20Capture%20020%20-%20Alpha%20Shop%20-%20localhost.png)
 
 ## Installation and Execution
 
 1. Clone the repository
 
-   `git clone`
+   `git clone https://github.com/ritacc12/Alpha-Shop.git`
 
 2. Enter the directory and run the command
 

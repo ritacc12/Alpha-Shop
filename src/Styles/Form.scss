@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   margin: 20px;
+  padding-top: 50px; // TBD
 }
 
 #form {
@@ -22,8 +23,15 @@
       width: 100%;
       height: 35px;
       background-color: white;
-      border-radius: 3px;
-      //border: 1px solid #5a5a5a;
+      border: 1px solid var(--input-border);
+    }
+
+    input[type="date"] ::before {
+      color: var(--input-text);
+    }
+
+    input[type="date"] ::after {
+      color: var(--main-text);
     }
 
     input[type="radio"] {
@@ -32,17 +40,19 @@
       margin-right: 0px;
       padding-left: 10px;
       align-self: center;
-      //-webkit-appearance: none;
     }
 
-    select {
+    select ::before {
       width: 100%;
       height: 43px;
       border-radius: 3px;
       background-color: white;
       color: #5a5a5a;
-      //border: 1px solid #5a5a5a;
     }
+    select::after {
+      color: var(--main-text);
+    }
+
     .radio-group.col.col-12 {
       padding-top: 5px;
       padding-bottom: 5px;
@@ -56,53 +66,6 @@
       padding: 0;
       margin: 0;
     }
-  }
-}
-
-// StepProgress
-.StepProgress {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 3rem;
-  background: goldenrod;
-
-  h3 {
-    color: black;
-    font-size: large;
-    padding-top: 10px;
-    padding-left: 10px;
-  }
-  .Step {
-    color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    text-align: center;
-  }
-
-  .circle-container {
-    height: 24px;
-    width: 24px;
-    background-color: white;
-    border-radius: 50%;
-    border: 1px solid darkgrey;
-    color: black;
-    margin: 0;
-    margin-right: 10px;
-  }
-  &.checked .circle-container::after {
-    content: "\2714";
-  }
-  .connect-line {
-    display: block;
-    height: 3px;
-    background-color: lightgrey;
-    position: absolute;
-    top: 100px;
-    right: 50%;
-    left: -50%;
   }
 }
 
@@ -133,8 +96,13 @@
     font-size: 14px;
   }
   .arrow {
-    width: 20px;
+    width: 20.5px;
     height: 9px;
     position: relative;
   }
+}
+.left-arrow {
+  width: 20.5px;
+  height: 9px;
+  position: relative;
 }

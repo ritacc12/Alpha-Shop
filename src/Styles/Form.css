@@ -1,8 +1,8 @@
-@charset "UTF-8";
 .step-content {
   display: flex;
   flex-direction: column;
   margin: 20px;
+  padding-top: 50px;
 }
 
 #form {
@@ -23,7 +23,13 @@
   width: 100%;
   height: 35px;
   background-color: white;
-  border-radius: 3px;
+  border: 1px solid var(--input-border);
+}
+#form .form-body input[type=date] ::before {
+  color: var(--input-text);
+}
+#form .form-body input[type=date] ::after {
+  color: var(--main-text);
 }
 #form .form-body input[type=radio] {
   width: 20px;
@@ -32,12 +38,15 @@
   padding-left: 10px;
   align-self: center;
 }
-#form .form-body select {
+#form .form-body select ::before {
   width: 100%;
   height: 43px;
   border-radius: 3px;
   background-color: white;
   color: #5a5a5a;
+}
+#form .form-body select::after {
+  color: var(--main-text);
 }
 #form .form-body .radio-group.col.col-12 {
   padding-top: 5px;
@@ -53,50 +62,6 @@
   margin: 0;
 }
 
-.StepProgress {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 3rem;
-  background: goldenrod;
-}
-.StepProgress h3 {
-  color: black;
-  font-size: large;
-  padding-top: 10px;
-  padding-left: 10px;
-}
-.StepProgress .Step {
-  color: black;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  text-align: center;
-}
-.StepProgress .circle-container {
-  height: 24px;
-  width: 24px;
-  background-color: white;
-  border-radius: 50%;
-  border: 1px solid darkgrey;
-  color: black;
-  margin: 0;
-  margin-right: 10px;
-}
-.StepProgress.checked .circle-container::after {
-  content: "✔";
-}
-.StepProgress .connect-line {
-  display: block;
-  height: 3px;
-  background-color: lightgrey;
-  position: absolute;
-  top: 100px;
-  right: 50%;
-  left: -50%;
-}
-
 .progress-control {
   display: flex;
   justify-content: space-evenly;
@@ -106,12 +71,12 @@
 }
 .progress-control .previousBtn {
   margin-left: 10px;
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
   border-style: none;
   width: 174px;
   height: 46px;
   border-radius: 8pt;
-  color: white;
+  color: black;
   font-size: 14px;
 }
 .progress-control .nextBtn {
@@ -125,7 +90,13 @@
   font-size: 14px;
 }
 .progress-control .arrow {
-  width: 20px;
+  width: 20.5px;
+  height: 9px;
+  position: relative;
+}
+
+.left-arrow {
+  width: 20.5px;
   height: 9px;
   position: relative;
 }/*# sourceMappingURL=Form.css.map */

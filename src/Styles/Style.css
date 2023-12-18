@@ -1,9 +1,9 @@
-@charset "UTF-8";
 /*reset */
-html {
+html,
+body {
   box-sizing: border-box;
+  height: 100%;
   margin: 0;
-  padding: 0;
 }
 
 *,
@@ -27,8 +27,7 @@ ul,
 menu {
   margin: 0;
   padding: 0;
-  font-weight: normal;
-  font-family: "Roboto", sans-serif;
+  list-style: none;
 }
 
 table {
@@ -54,243 +53,238 @@ ul {
 
 /*reset end*/
 :root {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  background-color: white;
-}
-
-a {
-  font-weight: 500;
-  color: black;
-  text-decoration: inherit;
-  justify-items: flex-start;
-  padding: 1.5rem;
-  margin-top: 0;
-}
-
-.menu {
-  padding-left: 0.5rem;
-}
-
-a:hover {
-  color: #535bf2;
+  --background-color: #ffffff;
+  --white: #ffffff;
+  --pink: #f67599;
+  --grey-800: #2a2a2a;
+  --grey-700: #333333;
+  --grey-400: #808080;
+  --grey-300: #999999;
+  --site-edge-margin: 15px;
+  --main-font-family: "Noto Sans TC", sans-serif;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  min-width: 320px;
-  min-height: 100vh;
+  --background-color: #ffffff;
+  --footer-background-color: #f6f7f8;
+  --nav-icon: #2a2a2a;
+  --social-icon: #808080;
+  --main-text: #2a2a2a;
+  --secondary-text: #808080;
+  --active-color: lightblue;
+  --undone-progress-border: #f0f0f5;
+  --done-progress-border: #000000;
+  --progress-current-color: #2a2a2a;
+  --progress-undone-color: #afb1bd;
+  --pg-addr-color: #ffffff;
+  --pg-addr-bg-color: #2a2a2a;
+  --input-label: #808080;
+  --input-border: #4a4a4a;
+  --input-text: #999999;
+  --select-arrow: #2a2a2a;
+  --select-true: #2a2a2a;
+  --select-false: #999999;
+  --product-action-text: #000000;
+  --product-action-bg: #f0f0f5;
+  --left-arrow: #000000;
+  background-color: var(--background-color);
+  color: var(--main-text);
+  font-family: var(--main-font-family);
+  font-size: 16px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
-h3 {
-  font-size: 1.5em;
-  line-height: 1.1;
+.container {
+  margin: 0px 15px;
 }
 
-.Header {
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mr-auto {
+  margin-right: auto !important;
+}
+
+.cursor-point {
+  cursor: pointer;
+}
+
+footer {
+  flex-grow: 1;
+}
+
+#header {
   width: 100%;
-  margin: 0;
+  background: white;
+  padding-top: 10px;
+  gap: 2rem;
+  height: 60px;
+  position: fixed;
+  z-index: 999;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  grid-template-columns: 2fr 1fr 30px 30px 30px;
+}
+#header .header-nav {
   display: flex;
-  flex-direction: column;
-  background-color: burlywood;
+  gap: 2rem;
+  grid-column-start: 1;
+  padding-left: 60px;
+  padding-right: 40px;
 }
-
-.logo {
-  size: 50px 50px;
+#header .header-nav .nav-item {
+  color: var(--main-text);
+  text-align: center;
 }
-
-.header-nav {
-  margin: 0;
-  padding: 0;
+#header .header-nav .nav-item:hover {
+  color: var(--input-text);
 }
-.header-nav ul {
-  display: flex;
-  justify-content: flex-start;
-  margin-right: 1rem;
+#header .nav-icon {
+  color: var(--main-text);
+  width: 24px;
 }
-.header-nav ul li {
-  padding: 2rem 1rem;
+#header .nav-icon .nav-icon:hover {
+  color: var(--input-text);
 }
-.header-nav ul li a {
-  font-size: 1.25rem;
-  color: black;
+#header .nav-icon .search {
+  padding-left: 10px;
 }
-
-i {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding-left: 0.5rem;
-}
-
-.logo {
-  background-image: url("../assets/pictures/logo.svg");
-  background-size: contain;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 250px;
-  height: 50px;
+#header .header-logo {
+  width: 169.83px;
+  height: 30px;
 }
 
 .step-content {
-  margin: 20px;
-}
-.step-content Form {
   display: flex;
   flex-direction: column;
+  margin: 20px;
+  padding-top: 50px;
 }
-.step-content Form .input-label {
-  color: #808080;
-  font-weight: 700;
-  font-size: 12px;
-  padding-bottom: 0px;
+
+#form {
+  width: 100vw;
 }
-.step-content Form .input-group {
-  margin: 10px 10px;
+#form .container {
+  padding-left: 40px;
+  padding-right: 40px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
-.step-content Form option {
-  color: black;
-  background-color: white;
-}
-.step-content Form input {
-  border: 1px solid #4a4a4a;
-}
-.step-content .form-title {
-  color: #2a2a2a;
-  padding: 20px 10px 5px;
-  font-weight: 700;
-  font-size: 24px;
-}
-.step-content .radio-info {
-  position: relative;
-  margin-top: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border: 1px solid #f0f0f5;
-  font-weight: 400;
-}
-.step-content .radio-info .period {
-  padding-left: 30px;
-  font-weight: 400;
-}
-.step-content .radio-info #radio {
-  width: 20px;
-  height: 20px;
-  margin-left: 10px;
-  margin-bottom: 5px;
-  color: #2a2a2a;
-}
-.step-content .radio-info .radio-info .input:checked {
-  border: 1px solid #2a2a2a;
-}
-.step-content .radio-info input[type=radio i] {
-  border-radius: 50%;
-  background-size: 20px 20px;
-  color: black;
-  margin-right: 10px;
-}
-.step-content .radio-info input[type=radio]:checked {
-  outline: none;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-.step-content .radio-info .choice-title {
-  padding-top: 20px;
-}
-.step-content .radio-info .price {
-  position: absolute;
-  left: 520px;
-  top: 13px;
-  font-weight: 400;
-  font-size: 12px;
-  color: #000000;
-}
-.step-content .radio-info .name {
-  width: 350px;
-  border: 1px solid #4a4a4a;
-}
-.step-content .StepProgress {
+#form .form-body {
   display: flex;
-  flex-direction: row;
-  margin-bottom: 3rem;
-  background: goldenrod;
-}
-.step-content .StepProgress h3 {
-  color: black;
-  font-size: large;
-  padding-top: 10px;
-  padding-left: 10px;
-}
-.step-content .StepProgress .Step {
-  color: black;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   gap: 10px;
-  text-align: center;
 }
-.step-content .StepProgress .circle-container {
-  height: 24px;
-  width: 24px;
+#form .form-body input {
+  width: 100%;
+  height: 35px;
   background-color: white;
-  border-radius: 50%;
-  border: 1px solid darkgrey;
-  color: black;
+  border: 1px solid var(--input-border);
+}
+#form .form-body input[type=date] ::before {
+  color: var(--input-text);
+}
+#form .form-body input[type=date] ::after {
+  color: var(--main-text);
+}
+#form .form-body input[type=radio] {
+  width: 20px;
+  height: 20px;
+  margin-right: 0px;
+  padding-left: 10px;
+  align-self: center;
+}
+#form .form-body select ::before {
+  width: 100%;
+  height: 43px;
+  border-radius: 3px;
+  background-color: white;
+  color: #5a5a5a;
+}
+#form .form-body select::after {
+  color: var(--main-text);
+}
+#form .form-body .radio-group.col.col-12 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 3px;
+  border: 1px solid #5a5a5a;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 0px;
+}
+#form .form-body .radio-info {
+  padding: 0;
   margin: 0;
-  margin-right: 10px;
 }
-.step-content .StepProgress.checked .circle-container::after {
-  content: "✔";
-}
-.step-content .StepProgress .connect-line {
-  display: block;
-  height: 3px;
-  background-color: lightgrey;
-  position: absolute;
-  top: 100px;
-  right: 50%;
-  left: -50%;
-}
-.step-content .progress-control {
+
+.progress-control {
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 30px;
   margin-top: 20px;
+  padding-top: 20px;
 }
-.step-content .progress-control .previousBtn {
+.progress-control .previousBtn {
   margin-left: 10px;
-  background-color: transparent;
+  background: transparent;
+  border-style: none;
+  width: 174px;
+  height: 46px;
+  border-radius: 8pt;
+  color: black;
+  font-size: 14px;
 }
-.step-content .progress-control .nextBtn {
+.progress-control .nextBtn {
   margin-left: 500px;
   background-color: #f67599;
+  border-style: none;
   width: 174px;
+  height: 46px;
+  border-radius: 8pt;
+  color: white;
+  font-size: 14px;
+}
+.progress-control .arrow {
+  width: 20.5px;
+  height: 9px;
+  position: relative;
+}
+
+.left-arrow {
+  width: 20.5px;
+  height: 9px;
+  position: relative;
 }
 
 .footer-container {
   display: flex;
+  flex-grow: 1;
   position: relative;
-  max-width: 1100px;
+  width: 100%;
+  height: 284px;
   margin: 0 auto;
   flex-wrap: nowrap;
   justify-content: space-between;
-  background-color: #f6f7f8;
+  background-color: var(--footer-background-color);
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 .footer-container .footer-logo-container {
   display: flex;
-  left: 0;
-  right: 0;
+  justify-content: flex-start;
+  align-items: center;
   height: 32px;
   width: 172px;
 }
 .footer-container .footer-logo-container img {
-  height: 100%;
-  width: 100%;
+  height: 32px;
+  width: 172px;
 }
 
 .footer-section {
@@ -303,32 +297,171 @@ i {
   font-size: 24px;
   font-weight: bold;
   line-height: 24px;
-  color: var(--main-text);
+  color: #2a2a2a;
+  font-weight: 700;
 }
 .footer-section .section-content {
   display: flex;
   flex-direction: column;
-  margin-top: 24px;
-  color: var(--secondary-text);
-}
-.footer-section .section-content > * {
-  color: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--social-icon);
+  padding-top: 10px;
 }
 .footer-section .section-content .page-link {
-  margin-bottom: 8px;
   font-weight: normal;
   line-height: 17px;
   text-decoration: none;
   cursor: pointer;
+  color: #808080;
 }
 .footer-section .section-content .tel-info {
   margin-bottom: 16px;
-  font-family: "Nunito Sans", sans-serif;
   font-weight: 600;
   line-height: 16px;
+  padding-top: 10px;
 }
 .footer-section .section-content .social-icon {
   width: 24px;
   height: 24px;
   margin-right: 16px;
+  padding-top: 10px;
+}
+
+Cart .form-right {
+  width: 40%;
+}
+Cart .cartTitle {
+  font-weight: 700;
+  color: var(--main-text);
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+Cart .itemName {
+  font-weight: 400;
+  color: var(--main-text);
+  font-size: 16px;
+  margin-bottom: 10px;
+  line-height: 24px;
+}
+Cart .cartItem {
+  width: 392px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 102px);
+  grid-template-areas: "itemImg itemImg itemName itemPrice" "itemImg itemImg itemQty itemPrice";
+}
+Cart .itemImg {
+  width: 100px;
+  height: 100px;
+  margin-right: 21px;
+}
+Cart .qtyBtn {
+  background-color: #f0f0f5;
+  width: 26px;
+  height: 27px;
+  border: none;
+  border-radius: 50%;
+}
+
+#form .form-body .col:nth-child(1) {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 10px;
+}
+#form .form-body .col:nth-child(2) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+#form .form-body .col:nth-child(3) {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 10px;
+}
+#form .form-body select {
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  background-color: white;
+  color: #5a5a5a;
+  border: 1px solid #5a5a5a;
+}
+#form .form-body .select-container,
+#form .form-body .city {
+  width: 160px;
+}
+#form .form-body .name,
+#form .form-body .address {
+  width: 350px;
+}
+#form .form-body .phone {
+  width: 255px;
+}
+#form .form-body .email {
+  width: 266px;
+}
+
+#form .form-body .col:nth-child(1) {
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 10px;
+}
+#form .form-body .col:nth-child(2) {
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 10px;
+}
+#form .form-body .col:nth-child(3) {
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+#form .form-body .name,
+#form .form-body .cardNumber {
+  width: 540px;
+}
+#form .form-body .period {
+  width: 255px;
+}
+#form .form-body .private {
+  width: 266px;
+}
+
+.StepProgress {
+  align-items: center;
+  justify-content: center;
+  margin-top: 120px;
+  padding-left: 20px;
+}
+.StepProgress .Progress-title {
+  color: var(--main-text);
+  font-size: 32px;
+  font-weight: 700;
+}
+.StepProgress .stepper-container {
+  width: 536px;
+  margin-top: 20px;
+}
+.StepProgress .Step {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.StepProgress .stepIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.StepProgress .circle-container {
+  height: 24px;
+  width: 24px;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid darkgrey;
+  color: black;
+  text-align: center;
+}
+.StepProgress .connect-line {
+  height: 2px;
+  width: 60px;
+  background: #000000;
+  margin: 0 20px;
 }/*# sourceMappingURL=Style.css.map */

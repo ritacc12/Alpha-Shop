@@ -3,6 +3,18 @@
   flex-direction: column;
   margin: 20px;
   padding-top: 50px;
+  width: 540px;
+}
+
+.form-left {
+  padding-left: 60px;
+  padding-right: 30px;
+}
+
+.form-right {
+  margin-top: 80px;
+  margin-bottom: 30px;
+  margin-left: 20px;
 }
 
 #form {
@@ -21,9 +33,10 @@
 }
 #form .form-body input {
   width: 100%;
-  height: 35px;
+  height: 40px;
   background-color: white;
   border: 1px solid var(--input-border);
+  border-radius: 3px;
 }
 #form .form-body input[type=date] ::before {
   color: var(--input-text);
@@ -67,7 +80,7 @@
   justify-content: space-evenly;
   margin-bottom: 30px;
   margin-top: 20px;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 .progress-control .previousBtn {
   margin-left: 10px;
@@ -81,7 +94,7 @@
 }
 .progress-control .nextBtn {
   margin-left: 500px;
-  background-color: #f67599;
+  background-color: var(--pink);
   border-style: none;
   width: 174px;
   height: 46px;

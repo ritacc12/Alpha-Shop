@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { useState } from "react";
+import "../Styles/Cart.scss";
 
 const initialList = [
   {
@@ -33,16 +34,8 @@ const Cart = () => {
     }
   };
   return (
-    <div className="cartList" style={{ marginLeft: "20px" }}>
-      <h5
-        className="cartTitle"
-        style={{
-          marginTop: "200px",
-          paddingBottom: "10px",
-          fontSize: "18px",
-          fontWeight: "700",
-        }}
-      >
+    <div className="cartList">
+      <h5 className="cartTitle" style={{ fontSize: "18px", fontWeigh: "700" }}>
         購物籃
       </h5>
 
@@ -87,20 +80,19 @@ const Cart = () => {
                   +{" "}
                 </button>
               </div>
-              <div className="itemPrice">{item.price}</div>
             </div>
-          </div>
-
-          <div className="cart-info shipping col col-12">
-            <div>運費</div>
-            <div className="price"></div>
-          </div>
-          <div className="cart-info total col col-12">
-            <div>小計</div>
-            <div className="price"></div>
+            <div className="itemPrice">${item.price}</div>
           </div>
         </>
       ))}
+      <div className="cart-info shipping line">
+        <div className="amount">運費</div>
+        <div className="price">免費</div>
+      </div>
+      <div className="cart-info total line">
+        <div className="amount">小計</div>
+        <div className="price">$300</div>
+      </div>
     </div>
   );
 };

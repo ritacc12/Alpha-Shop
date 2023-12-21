@@ -30,8 +30,12 @@
   width: 350px;
 }
 #form .form-body .phone {
-  width: 255px;
+  width: 251px;
 }
 #form .form-body .email {
   width: 266px;
+}
+
+.form-title {
+  padding-bottom: 10px;
 }/*# sourceMappingURL=Step1.css.map */

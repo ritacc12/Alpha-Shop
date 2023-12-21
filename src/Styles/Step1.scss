@@ -25,11 +25,14 @@
     color: #5a5a5a;
     border: 1px solid #5a5a5a;
   }
-  .select-container,
+  .title,
   .city {
-    width: 160px;
+    width: 158px;
   }
-  .name,
+
+  .Username {
+    width: 350px;
+  }
   .address {
     width: 350px;
   }
@@ -37,7 +40,7 @@
     width: 251px;
   }
   .email {
-    width: 266px;
+    width: 255px;
   }
 }
 

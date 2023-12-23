@@ -3,18 +3,12 @@
   flex-direction: column;
   margin: 20px;
   padding-top: 50px;
-  width: 540px;
-}
-
-.form-left {
-  padding-left: 60px;
-  padding-right: 30px;
 }
 
 .form-right {
   margin-top: 80px;
   margin-bottom: 30px;
-  margin-left: 20px;
+  margin-left: 100px;
 }
 
 #form {
@@ -78,22 +72,25 @@
 .progress-control {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   margin-bottom: 30px;
   margin-top: 20px;
   padding-top: 30px;
+  width: 540px;
+  margin-left: 20px;
 }
 .progress-control .previousBtn {
-  margin-left: 10px;
+  margin-top: 10px;
   background: transparent;
   border-style: none;
-  width: 174px;
-  height: 46px;
+  width: 100px;
+  height: 24px;
   border-radius: 8pt;
   color: black;
   font-size: 14px;
+  margin-right: 300px;
 }
 .progress-control .nextBtn {
-  margin-left: 500px;
   background-color: var(--pink);
   border-style: none;
   width: 174px;

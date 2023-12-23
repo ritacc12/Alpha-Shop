@@ -4,11 +4,13 @@
 
 This is a React practice project and will update the function and layout by weeks.
 
-- 2023/12/18 create the header, register form and footer
-  ![alpha-shop-step1] (https://github.com/ritacc12/IMG/blob/main/FireShot%20Capture%20020%20-%20Alpha%20Shop%20-%20localhost.png)
+- 2023/12/18 Finish the basic layout of header, register form and footer
 
-- 2023/12/23 render the cart
-  ![alpha-shop-step2] (https://github.com/ritacc12/IMG/blob/main/Alpha%20Shop-2.png)
+  ![step1-image](https://github.com/ritacc12/Alpha-Shop/blob/main/public/Screenshots/FireShot%20Capture%20020%20-%20Alpha%20Shop%20-%20localhost.png)
+
+- 2023/12/23 Render the Cart layout
+
+  ![step2-image](https://github.com/ritacc12/Alpha-Shop/blob/main/public/Screenshots/Alpha%20Shop-2.png)
 
 ## Installation and Execution
 

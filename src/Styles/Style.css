@@ -236,9 +236,10 @@ footer {
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 30px;
-  margin-top: 20px;
+  margin-top: 60px;
   padding-top: 30px;
   width: 540px;
+  margin-left: 20px;
 }
 .progress-control .previousBtn {
   margin-top: 10px;
@@ -461,21 +462,20 @@ footer {
   color: #5a5a5a;
   border: 1px solid #5a5a5a;
 }
-
-.input-group .title,
-.input-group .city {
+#form .form-body .title,
+#form .form-body .city {
   width: 158px;
 }
-.input-group .Username {
+#form .form-body .Username {
   width: 350px;
 }
-.input-group .address {
+#form .form-body .address {
   width: 350px;
 }
-.input-group .phone {
+#form .form-body .phone {
   width: 251px;
 }
-.input-group .email {
+#form .form-body .email {
   width: 255px;
 }
 

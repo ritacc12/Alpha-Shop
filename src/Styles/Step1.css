@@ -21,11 +21,13 @@
   color: #5a5a5a;
   border: 1px solid #5a5a5a;
 }
-#form .form-body .select-container,
+#form .form-body .title,
 #form .form-body .city {
-  width: 160px;
+  width: 158px;
 }
-#form .form-body .name,
+#form .form-body .Username {
+  width: 350px;
+}
 #form .form-body .address {
   width: 350px;
 }
@@ -33,7 +35,7 @@
   width: 251px;
 }
 #form .form-body .email {
-  width: 266px;
+  width: 255px;
 }
 
 .form-title {

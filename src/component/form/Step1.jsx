@@ -6,7 +6,7 @@ export default function Step1() {
         <form className="step1">
           <h3 className="form-title">寄送地址</h3>
           <section className="form-body col col-12">
-            <div className="col">
+            <div className="col col-12">
               <div className="input-group">
                 <div className="input-label">稱謂</div>
                 <div className="select-container">

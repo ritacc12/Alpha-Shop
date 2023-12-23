@@ -7,7 +7,11 @@ const ProgressControl = ({ stage, setStage }) => {
     <>
       <div
         className="progress-control"
-        style={{ borderTop: "1px solid #E6E6EB", paddingTop: "10px" }}
+        style={{
+          borderTop: "1px solid #E6E6EB",
+          paddingTop: "30px",
+          width: "540px",
+        }}
       >
         <button
           className="previousBtn"

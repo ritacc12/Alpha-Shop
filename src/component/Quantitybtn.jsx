@@ -1,11 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { CartContext } from "./CartContext";
 
-const QuantityBtn = () => {
+export default function QuantityBtn() {
   const [count, setCount] = useState(1);
 
-  const decrement = (draft, action) => {
+  const decrement = () => {
     if (count > 0) {
       setCount((previousCount) => previousCount - 1);
     }
@@ -14,7 +15,6 @@ const QuantityBtn = () => {
   const increment = () => {
     setCount((previousCount) => previousCount + 1);
   };
-
   return (
     <div className="itemQty">
       <button
@@ -46,6 +46,4 @@ const QuantityBtn = () => {
       </button>
     </div>
   );
-};
-
-export default QuantityBtn;
+}

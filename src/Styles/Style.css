@@ -98,6 +98,36 @@ body {
 
 .container {
   margin: 0px 15px;
+  /*Mobile First RWD*/
+  display: flex;
+  flex-direction: column;
+  padding: 0 3%;
+}
+@media (min-width: 800px) {
+  .container {
+    display: grid;
+    grid-template-columns: minmax(362px, 6fr) minmax(50px, 1fr) minmax(278px, 4fr);
+    grid-template-rows: auto 250px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    padding: 0 6.45%;
+  }
+  .container .StepProgress {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .container .progress-control {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    grid-template-columns: minmax(600px, 6fr) minmax(125px, 1fr) minmax(440px, 4fr);
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    padding: 0 11.45%;
+  }
 }
 
 .mx-auto {
@@ -403,7 +433,7 @@ footer {
   font-weight: 700;
 }
 
-.quality {
+.quantity {
   text-align: center;
   align-items: center;
 }

@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { useState, useContext } from "react";
-import { CartContext } from "./CartContext";
 
 export default function QuantityBtn() {
   const [count, setCount] = useState(1);

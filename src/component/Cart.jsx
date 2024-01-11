@@ -1,15 +1,37 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { useState } from "react";
-import QuantityBtn from "./Quantitybtn.jsx";
-import PriceList from "./PriceList.jsx";
+import ProductList from "./ProductList.jsx";
 import "../Styles/Cart.scss";
-import { initialList } from "./CartContext.js";
+
+const initialList = [
+  {
+    id: "1",
+    name: "貓咪罐罐",
+    img: "https://picsum.photos/300/300?text=1",
+    price: 100,
+    quantity: 2,
+  },
+  {
+    id: "2",
+    name: "貓咪干干",
+    img: "https://picsum.photos/300/300?text=2",
+    price: 200,
+    quantity: 1,
+  },
+];
 
 const Cart = (item) => {
+  const [count, setCount] = useState(1);
+
   let TotalAmount = initialList.reduce((total, product) => {
     return (total += product.price * product.quantity);
   }, 0);
+
+  const [price, setPrice] = useState(100);
+
+  let Subtotal = Number(count * price);
+  console.log(typeof Subtotal);
 
   return (
     <div className="cartList">
@@ -17,26 +39,19 @@ const Cart = (item) => {
         購物籃
       </h5>
 
-      {initialList.map((item) => (
-        <>
-          <div className="cartItem">
-            <div className="itemImg">
-              <img
-                src={item.img}
-                className="productImg"
-                style={{ width: "100px" }}
-              ></img>
-            </div>
-            <div className="product-info">
-              <div className="itemName" key={item.id}>
-                {item.name}
-              </div>
-              <QuantityBtn quantity={item.quantity} itemInfo={item} />
-            </div>
-            <div className="itemPrice">${item.price}</div>
-          </div>
-        </>
-      ))}
+      {initialList.map((product) => {
+        return (
+          <ProductList
+            key={product.id}
+            imgSrc={product.img}
+            productId={product.id}
+            productName={product.name}
+            productPrice={product.price}
+            productQuantity={product.quantity}
+          />
+        );
+      })}
+      {/* <PriceList text="運費" price="0"></PriceList> */}
       <div className="cart-info shipping line">
         <div className="amount">運費</div>
         <div className="price">免費</div>

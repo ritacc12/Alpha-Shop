@@ -1,38 +1,16 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { useState } from "react";
+import QuantityBtn from "./Quantitybtn.jsx";
+import PriceList from "./PriceList.jsx";
 import "../Styles/Cart.scss";
+import { initialList } from "./CartContext.js";
 
-const initialList = [
-  {
-    id: "1",
-    name: "貓咪罐罐",
-    img: "https://picsum.photos/300/300?text=1",
-    price: 100,
-    quantity: 2,
-  },
-  {
-    id: "2",
-    name: "貓咪干干",
-    img: "https://picsum.photos/300/300?text=2",
-    price: 200,
-    quantity: 1,
-  },
-];
+const Cart = (item) => {
+  let TotalAmount = initialList.reduce((total, product) => {
+    return (total += product.price * product.quantity);
+  }, 0);
 
-const Cart = () => {
-  const [quality, setQuality] = useState("0");
-  const reduceQuality = (quality) => {
-    if (quality > 1) {
-      setQuality(quality - 1);
-    }
-  };
-
-  const addQuality = (quality) => {
-    if (quality > 0) {
-      setQuality(quality + 1);
-    }
-  };
   return (
     <div className="cartList">
       <h5 className="cartTitle" style={{ fontSize: "18px", fontWeigh: "700" }}>
@@ -41,7 +19,7 @@ const Cart = () => {
 
       {initialList.map((item) => (
         <>
-          <div className="cartItem" key={item.id}>
+          <div className="cartItem">
             <div className="itemImg">
               <img
                 src={item.img}
@@ -50,36 +28,10 @@ const Cart = () => {
               ></img>
             </div>
             <div className="product-info">
-              <div className="itemName">{item.name}</div>
-              <div className="itemQty">
-                <button
-                  onClick={reduceQuality}
-                  className="qtyBtn"
-                  style={{
-                    borderRadius: "50%",
-                    border: "0",
-                    width: "26px",
-                    height: "27px",
-                  }}
-                >
-                  {" "}
-                  -{" "}
-                </button>
-                <div className="quality">{item.quantity}</div>
-                <button
-                  className="qtyBtn"
-                  onClick={addQuality}
-                  style={{
-                    borderRadius: "50%",
-                    border: "0",
-                    width: "26px",
-                    height: "27px",
-                  }}
-                >
-                  {" "}
-                  +{" "}
-                </button>
+              <div className="itemName" key={item.id}>
+                {item.name}
               </div>
+              <QuantityBtn quantity={item.quantity} itemInfo={item} />
             </div>
             <div className="itemPrice">${item.price}</div>
           </div>
@@ -91,10 +43,51 @@ const Cart = () => {
       </div>
       <div className="cart-info total line">
         <div className="amount">小計</div>
-        <div className="price">$300</div>
+        <div className="price total">{TotalAmount}</div>
       </div>
     </div>
   );
 };
 
 export default Cart;
+
+//   function tasksReducer(draft, action) {
+//     switch (action.type) {
+//       case "added": {
+//         const productId = action.id;
+//         const targetItem = draft.find((item) => item.id === productId);
+//         targetItem.quantity++;
+//         let totalAmount = 0;
+//         draft.forEach((item) => {
+//           if (item.id !== "total") {
+//             totalAmount += item.quantity * item.price;
+//           }
+//         });
+
+//         const newTotal = draft.find((item) => item.id === "total");
+//         newTotal.totalAmount = totalAmount;
+//         break;
+//       }
+//       case "decreased": {
+//         const productId = action.id;
+
+//         const targetItem = draft.find((item) => item.id === productId);
+//         targetItem.quantity--;
+
+//         let totalAmount = 0;
+//         draft.forEach((item) => {
+//           if (item.id !== "total") {
+//             totalAmount += item.quantity * item.price;
+//           }
+//         });
+
+//         const newTotal = draft.find((item) => item.id === "total");
+//         newTotal.totalAmount = totalAmount;
+//         break;
+//       }
+//       default: {
+//         throw Error("Unknown action: " + action.type);
+//       }
+//     }
+//   }
+// };
